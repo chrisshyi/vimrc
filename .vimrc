@@ -1,4 +1,22 @@
 set nocompatible
+
+filetype off
+
+" Note Vundle.vim is not in ~/.vim/bundle 
+set rtp+=~/.vim/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'vim-syntastic/syntastic'
+
+call vundle#end()
+
+filetype plugin indent on
+
+
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -14,3 +32,24 @@ set hlsearch
 syntax on
 
 set mouse=a
+hi clear SignColumn
+
+
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_console_startup = 1
+let g:syntastic_error_symbol = 'x'
+augroup mySyntastic
+    au!
+    au FileType tex let b:syntastic_mode = "passive"
+augroup END
+
+augroup mySyntastic
+  " tell syntastic to always stick any detected errors into the location-list
+  au FileType sml let g:syntastic_always_populate_loc_list = 1
+
+  " automatically open and/or close the location-list
+  au FileType sml let g:syntastic_auto_loc_list = 1
+augroup END
+
+" press <Leader>S (i.e., \S) to not automatically check for errors
+nnoremap <Leader>S :SyntasticToggleMode<CR>
