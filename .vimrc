@@ -8,8 +8,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()
@@ -28,6 +26,8 @@ set number
 set showcmd
 set incsearch
 set hlsearch
+set tagstack
+set tags=./tags,tags;$HOME/ece344labs/tags
 
 syntax on
 
@@ -35,8 +35,6 @@ set mouse=a
 hi clear SignColumn
 
 
-nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
-let g:nerdtree_tabs_open_on_console_startup = 1
 let g:syntastic_error_symbol = 'x'
 augroup mySyntastic
     au!
