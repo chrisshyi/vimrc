@@ -28,6 +28,7 @@ set incsearch
 set hlsearch
 set tagstack
 set tags=./tags,tags;$HOME/ece344labs/tags
+set background=dark
 
 syntax on
 
