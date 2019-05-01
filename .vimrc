@@ -7,8 +7,7 @@ set rtp+=~/.vim/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 
@@ -27,7 +26,7 @@ set showcmd
 set incsearch
 set hlsearch
 set tagstack
-set tags=./tags,tags;$HOME/ece344labs/tags
+set tags=./tags,tags,$HOME/workspace/c/ece344labs/tags,$HOME/workspace/ostep/condition_var/tags
 set background=dark
 
 syntax on
@@ -52,3 +51,5 @@ augroup END
 
 " press <Leader>S (i.e., \S) to not automatically check for errors
 nnoremap <Leader>S :SyntasticToggleMode<CR>
+
+set clipboard+=unnamedplus
