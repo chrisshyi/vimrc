@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'w0rp/ale'
 Plugin 'christoomey/vim-system-copy'
+Plugin 'xavierd/clang_complete'
 
 call vundle#end()
 
@@ -54,6 +55,10 @@ augroup END
 nnoremap <Leader>S :SyntasticToggleMode<CR>
 
 set clipboard+=unnamedplus
+" ALE configurations
 let g:ale_linters = {'cpp': ['clang']}
 let g:ale_cpp_clang_executable = "/usr/bin/clang++-9"
 let g:ale_cpp_clang_options = '-std=c++17 -Wall -I/usr/lib/llvm-9/include/c++/v1'
+
+let g:clang_library_path='/usr/lib/llvm-9/lib/'
+let g:clang_complete_auto = 1
