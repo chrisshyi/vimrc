@@ -3,14 +3,13 @@ set nocompatible
 filetype off
 
 " Note Vundle.vim is not in ~/.vim/bundle 
-set rtp+=~/.vim/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'zxqfl/tabnine-vim'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'w0rp/ale'
 Plugin 'christoomey/vim-system-copy'
-Plugin 'xavierd/clang_complete'
 
 call vundle#end()
 
