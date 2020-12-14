@@ -59,8 +59,8 @@ nnoremap <Leader>S :SyntasticToggleMode<CR>
 set clipboard+=unnamedplus
 " ALE configurations
 let g:ale_linters = {'cpp': ['clang'], 'c': ['clang']}
-let g:ale_cpp_clang_executable = "/usr/bin/clang++-9"
-let g:ale_cpp_clang_options = '-std=c++17 -Wall -I/usr/lib/llvm-9/include/c++/v1'
+let g:ale_cpp_clang_executable = "/usr/bin/clang++-10"
+let g:ale_cpp_clang_options = '-std=c++17 -Wall -I/usr/lib/llvm-10/include/c++/v1'
 
-let g:clang_library_path='/usr/lib/llvm-9/lib/'
+let g:clang_library_path='/usr/lib/llvm-10/lib/'
 let g:clang_complete_auto = 1
