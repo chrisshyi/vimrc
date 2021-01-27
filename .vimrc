@@ -57,3 +57,11 @@ augroup END
 nnoremap <Leader>S :SyntasticToggleMode<CR>
 
 set clipboard+=unnamedplus
+
+noremap <down> g<down>
+noremap <up> g<up>
+noremap j gj
+noremap k gk
+
+imap jj <Esc>
+
