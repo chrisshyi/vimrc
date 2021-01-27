@@ -8,7 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'christoomey/vim-system-copy'
 
 call vundle#end()
@@ -64,4 +64,3 @@ noremap j gj
 noremap k gk
 
 imap jj <Esc>
-
