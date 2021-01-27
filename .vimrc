@@ -17,7 +17,6 @@ filetype plugin indent on
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -58,9 +57,9 @@ nnoremap <Leader>S :SyntasticToggleMode<CR>
 
 set clipboard+=unnamedplus
 
-noremap <down> g<down>
-noremap <up> g<up>
-noremap j gj
-noremap k gk
-
-imap jj <Esc>
+inoremap jj <Esc>
+" Remap split navigation keys
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
