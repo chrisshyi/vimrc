@@ -1,11 +1,11 @@
 set nocompatible
+set rnu
 
 filetype off
 
 " Note Vundle.vim is not in ~/.vim/bundle 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'zxqfl/tabnine-vim'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'w0rp/ale'
@@ -57,10 +57,3 @@ augroup END
 nnoremap <Leader>S :SyntasticToggleMode<CR>
 
 set clipboard+=unnamedplus
-" ALE configurations
-let g:ale_linters = {'cpp': ['clang'], 'c': ['clang']}
-let g:ale_cpp_clang_executable = "/usr/bin/clang++-10"
-let g:ale_cpp_clang_options = '-std=c++17 -Wall -I/usr/lib/llvm-10/include/c++/v1'
-
-let g:clang_library_path='/usr/lib/llvm-10/lib/'
-let g:clang_complete_auto = 1
